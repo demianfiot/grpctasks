@@ -1,0 +1,6 @@
+db : 
+      username : "crm_user" #"crm_user_actual"
+      host : "localhost" #"postgres"
+      port : "5432"
+      dbname : "crm_db" #"crm_db"
+      sslmode : "disable"
