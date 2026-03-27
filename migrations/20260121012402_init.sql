@@ -1,3 +1,5 @@
+-- +goose Up
+
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -16,3 +18,8 @@ CREATE TABLE tasks (
         ON DELETE SET NULL,
     completed BOOLEAN NOT NULL DEFAULT false
 );
+
+-- +goose Down
+
+DROP TABLE IF EXISTS tasks CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
